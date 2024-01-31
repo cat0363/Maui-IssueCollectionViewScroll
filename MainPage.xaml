@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_IssueCollectionViewScroll.MainPage">
+
+    <Grid RowDefinitions="44,*">
+        <Button x:Name="btnAdd" Text="Add Item" TextColor="White" BackgroundColor="Blue" Clicked="btnAdd_Clicked" />
+        <CollectionView x:Name="cvTestList" Grid.Row="1" ItemsLayout="VerticalList" ItemSizingStrategy="MeasureAllItems">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HeightRequest="60">
+                        <Label Text="{Binding ItemName}" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Start" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+    
+</ContentPage>
